@@ -1,3 +1,9 @@
+/* Universal reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body{
   display: flex;
   flex-direction: column;
@@ -14,14 +20,15 @@ body{
 h1 {
 font-size: 3rem;
 height: 5vh;
+margin-top: 30px;
 }
 .slider {
   position: relative;
-  width: 130px; /* Adjust width of the slider */
+  width: 140px; /* Adjust width of the slider */
   height: 40px; /* Adjust height of the slider */
   background-color: #e0e0e0; /* Background color for the slider */
   border-radius: 20px; /* Rounded edges */
-  margin: 20px 0; /* Margin for spacing */
+  margin: 50px 0; /* Margin for spacing */
 }
 .highlight {
   position: absolute;
@@ -34,7 +41,7 @@ height: 5vh;
 .slider-text {
   position: absolute;
   top: 5%;
-  transform: translateY(-50%);
+  transform: translateY(47%);
   width: 50%;
   text-align: center;
   font-size: 1rem;
@@ -153,4 +160,38 @@ border-right: 0;
 /* Positioning and layout for the rows */
 .row1, .row2, .row3 {
   position: relative;
+}
+
+/* Adjusted Owner section styling for a medium size */
+#owner {
+  margin-top: 30px; /* Space at the top */
+  padding: 10px 15px; /* Reduced padding for a smaller size */
+  text-align: center; /* Center align text */
+  background-color: #ffffff; /* White background for clarity */
+  border-top: 2px solid #4CAF50; /* Green top border for accent */
+  font-size: 0.9rem; /* Slightly smaller font size */
+  color: #333; /* Dark gray text for better readability */
+  font-family: 'Arial', sans-serif; /* Clean font */
+  font-weight: 400; /* Lighter font weight */
+  width: 100%; /* Full width */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+  border-radius: 5px; /* Slightly rounded corners */
+}
+
+/* Owner name styling */
+#owner-name {
+  color: #4CAF50; /* Green color for the owner name */
+  font-weight: bold; /* Bold for emphasis */
+}
+
+/* Heart emoji styling */
+#owner p {
+  margin: 0; /* Remove default margin */
+}
+
+#owner p::before {
+  content: "❤️"; /* Heart emoji */
+  font-size: 1rem; /* Size of the emoji */
+  margin-right: 5px; /* Space between emoji and text */
+  vertical-align: middle; /* Align emoji with text */
 }
